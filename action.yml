@@ -1,15 +1,15 @@
 name: cite-gate
-description: Fail the build when a script states facts that are not backed by verbatim source quotes.
+description: "Fail the build when a script states facts that are not backed by verbatim source quotes."
 inputs:
   claims:
-    description: Path to the claims JSON file.
+    description: "Path to the claims JSON file."
     required: true
   sources:
-    description: Directory of <src>.txt source files (default: ./sources next to the claims file).
+    description: "Directory of <src>.txt source files. Defaults to ./sources next to the claims file."
     required: false
     default: ""
   strict:
-    description: Also fail on warnings ("true" or "false").
+    description: "Also fail on warnings (true or false)."
     required: false
     default: "false"
 runs:
