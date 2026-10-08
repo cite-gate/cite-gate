@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cite-gate"
+version = "0.1.0"
+description = "Check that every fact in a script is backed by a verbatim source quote, and that the prose retells rather than copies."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "AGPL-3.0-or-later" }
+dependencies = []
+
+[project.scripts]
+cite-gate = "cite_gate.__main__:main"
+
+[tool.setuptools]
+packages = ["cite_gate"]

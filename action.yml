@@ -1,0 +1,30 @@
+name: cite-gate
+description: Fail the build when a script states facts that are not backed by verbatim source quotes.
+inputs:
+  claims:
+    description: Path to the claims JSON file.
+    required: true
+  sources:
+    description: Directory of <src>.txt source files (default: ./sources next to the claims file).
+    required: false
+    default: ""
+  strict:
+    description: Also fail on warnings ("true" or "false").
+    required: false
+    default: "false"
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+    - shell: bash
+      env:
+        SG_CLAIMS: ${{ inputs.claims }}
+        SG_SOURCES: ${{ inputs.sources }}
+        SG_STRICT: ${{ inputs.strict }}
+      run: |
+        args=(check "$SG_CLAIMS")
+        if [ -n "$SG_SOURCES" ]; then args+=(--sources "$SG_SOURCES"); fi
+        if [ "$SG_STRICT" = "true" ]; then args+=(--strict); fi
+        PYTHONPATH="${{ github.action_path }}" python -m cite_gate "${args[@]}"

@@ -1,0 +1,54 @@
+{
+ "config": {
+  "allow": ["Lincoln", "Gettysburg"]
+ },
+ "sections": [
+  {
+   "title": "The occasion",
+   "items": [
+    {
+     "id": "date",
+     "text": "Lincoln spoke at the dedication of the cemetery at Gettysburg on November 19, 1863.",
+     "claims": [
+      {"src": "gettysburg", "quote": "Address delivered at the dedication of the Cemetery at Gettysburg."},
+      {"src": "gettysburg", "quote": "Abraham Lincoln November 19, 1863"}
+     ]
+    },
+    {
+     "id": "opening",
+     "text": "He began by looking back four score and seven years, to the founding of a nation built on the idea that all men are created equal.",
+     "claims": [
+      {"src": "gettysburg", "quote": "Four score and seven years ago our fathers brought forth on this continent, a new nation"},
+      {"src": "gettysburg", "quote": "dedicated to the proposition that all men are created equal"}
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Deliberate mistakes (this section should fail)",
+   "items": [
+    {
+     "id": "number-not-in-quote",
+     "text": "Four score and seven years is 87 years, so he was counting back to 1776.",
+     "claims": [
+      {"src": "gettysburg", "quote": "Four score and seven years ago our fathers brought forth on this continent, a new nation"}
+     ]
+    },
+    {
+     "id": "copied-not-retold",
+     "text": "He said it is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced.",
+     "claims": [
+      {"src": "gettysburg", "quote": "It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced."}
+     ]
+    },
+    {
+     "id": "quote-not-in-source",
+     "text": "He promised that the nation would endure forever.",
+     "claims": [
+      {"src": "gettysburg", "quote": "this nation shall endure forever and ever"}
+     ]
+    }
+   ]
+  }
+ ]
+}
