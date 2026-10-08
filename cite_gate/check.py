@@ -129,6 +129,19 @@ def _era_issues(text: str, qtext: str, allow: set[str], era: dict) -> tuple[list
 
 
 def check(claims: dict, sources_dir: Path) -> Report:
+    """Check a claims document against `<sources_dir>/<src>.txt` files."""
+    def load(src: str) -> str | None:
+        p = sources_dir / f"{src}.txt"
+        return p.read_text(encoding="utf-8") if p.is_file() else None
+    return _check(claims, load)
+
+
+def check_texts(claims: dict, sources: dict[str, str]) -> Report:
+    """Same checks, with the source texts passed in directly (used by the MCP server)."""
+    return _check(claims, sources.get)
+
+
+def _check(claims: dict, load_source) -> Report:
     cfg = {**DEFAULTS, **claims.get("config", {})}
     era = cfg["era"]
     if era is not None and not isinstance(era, dict):
@@ -155,8 +168,8 @@ def check(claims: dict, sources_dir: Path) -> Report:
                     rep.fail(tag, f"invalid source id {src!r} (letters, digits, '.', '_', '-' only)")
                     continue
                 if src not in cache:
-                    p = sources_dir / f"{src}.txt"
-                    cache[src] = normalise(p.read_text(encoding="utf-8")) if p.is_file() else None
+                    raw = load_source(src)
+                    cache[src] = normalise(raw) if raw is not None else None
                 if cache[src] is None:
                     rep.fail(tag, f"no source file for '{src}'")
                     continue

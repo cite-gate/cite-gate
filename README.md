@@ -95,6 +95,31 @@ GitHub Actions:
     strict: "false"
 ```
 
+### Use from your agent (MCP)
+
+cite-gate ships a small [Model Context Protocol](https://modelcontextprotocol.io) server, so an
+agent can check its own draft before it shows it to you. It runs locally over stdio, has no
+dependencies, makes no network calls and collects no telemetry.
+
+```json
+{
+  "mcpServers": {
+    "cite-gate": { "command": "python", "args": ["-m", "cite_gate.mcp_server"],
+                   "cwd": "/path/to/cite-gate" }
+  }
+}
+```
+
+Tools:
+
+| Tool | Input | Output |
+|---|---|---|
+| `check_citations` | `claims` (the format above) and `sources` (`{id: full text}`) | failures, warnings, `passed` |
+| `check_numbers` | `text` and `quotes` | numbers in the text that no quote contains |
+
+Would a hosted version or a review service be useful to you? Tell us in
+[Discussions](https://github.com/cite-gate/cite-gate/discussions).
+
 ## Limits
 
 * The heuristics are tuned for English prose.

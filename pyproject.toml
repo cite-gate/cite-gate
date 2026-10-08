@@ -13,6 +13,7 @@ dependencies = []
 
 [project.scripts]
 cite-gate = "cite_gate.__main__:main"
+cite-gate-mcp = "cite_gate.mcp_server:main"
 
 [tool.setuptools]
 packages = ["cite_gate"]
