@@ -1,0 +1,10 @@
+# Hosted cite-gate MCP endpoint — Cloudflare Workers (free plan).
+# Deploy: npx wrangler deploy   (secret: npx wrangler secret put SALT)
+name = "cite-gate"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+# Call log (no script text): Workers Analytics Engine. Rows older than the dataset's retention are dropped.
+[[analytics_engine_datasets]]
+binding = "LOG"
+dataset = "cite_gate_calls"

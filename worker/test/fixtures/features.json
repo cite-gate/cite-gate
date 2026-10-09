@@ -1,0 +1,129 @@
+{
+ "claims": {
+  "config": {
+   "allow": [
+    "Tōkaidō"
+   ],
+   "era": {
+    "name": "Harbour Age",
+    "tie": "(?i)\b18[0-9][0-9]\b",
+    "months": false,
+    "letters": "ōı"
+   }
+  },
+  "sections": [
+   {
+    "title": "t",
+    "items": [
+     {
+      "id": "ok",
+      "text": "The harbour had room for 1,200 ships by 1850.",
+      "claims": [
+       {
+        "src": "town",
+        "quote": "The harbour held 1,200 ships in 1850."
+       }
+      ]
+     },
+     {
+      "id": "num",
+      "text": "The harbour held 1,500 ships in 1850 near Dover.",
+      "claims": [
+       {
+        "src": "town",
+        "quote": "The harbour held 1,200 ships in 1850."
+       }
+      ]
+     },
+     {
+      "id": "qty",
+      "text": "Over a thousand ships came in March, and Smith's boats too.",
+      "claims": [
+       {
+        "src": "town",
+        "quote": "The harbour held 1,200 ships in 1850."
+       }
+      ]
+     },
+     {
+      "id": "copy",
+      "text": "Here fishermen sold their catch at the market each morning before sunrise.",
+      "claims": [
+       {
+        "src": "town",
+        "quote": "fishermen sold their catch at the market each morning before sunrise."
+       }
+      ]
+     },
+     {
+      "id": "fold",
+      "text": "In the Harbour Age travellers took the Tokaido past Kadikoy.",
+      "claims": [
+       {
+        "src": "town",
+        "quote": "In the Harbour Age the Tōkaidō road ran past Kadıköy."
+       }
+      ]
+     },
+     {
+      "id": "curly",
+      "text": "The old quay was rebuilt in 1851.",
+      "claims": [
+       {
+        "src": "town",
+        "quote": "It's said the \"old quay\" - rebuilt in 1851 - held a thousand barrels."
+       }
+      ]
+     },
+     {
+      "id": "short",
+      "text": "Ships.",
+      "claims": [
+       {
+        "src": "town",
+        "quote": "1,200 ships"
+       }
+      ]
+     },
+     {
+      "id": "badsrc",
+      "text": "Ships.",
+      "claims": [
+       {
+        "src": "../x",
+        "quote": "The harbour held 1,200 ships in 1850."
+       }
+      ]
+     },
+     {
+      "id": "nosrc",
+      "text": "Ships.",
+      "claims": [
+       {
+        "src": "other",
+        "quote": "The harbour held 1,200 ships in 1850."
+       }
+      ]
+     },
+     {
+      "id": "noclaims",
+      "text": "Nothing."
+     },
+     {
+      "id": "era",
+      "text": "In the Victorian period, the Harbour Age lighthouse stood on the eastern pier in June.",
+      "claims": [
+       {
+        "src": "town",
+        "quote": "A lighthouse stood on the eastern pier"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "sources": {
+  "town": "The harbour held 1,200 ships in 1850. A lighthouse stood on the eastern pier, and fishermen sold their catch at the market each morning before sunrise. In the Harbour Age the Tōkaidō road ran past Kadıköy. It’s said the “old quay” — rebuilt in 1851 — held a thousand barrels."
+ }
+}

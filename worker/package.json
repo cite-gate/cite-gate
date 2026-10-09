@@ -1,0 +1,6 @@
+{
+ "name": "cite-gate-worker",
+ "private": true,
+ "type": "module",
+ "scripts": { "test": "node --test test/parity.test.mjs test/worker.test.mjs" }
+}
