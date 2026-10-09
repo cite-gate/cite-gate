@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.cite-gate/cite-gate",
+  "title": "cite-gate",
+  "description": "Checks that every quote in an AI-written script appears word for word in its source.",
+  "repository": {
+    "url": "https://github.com/cite-gate/cite-gate",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.mlpc.co.kr/mcp"
+    }
+  ]
+}
