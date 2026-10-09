@@ -4,6 +4,10 @@ name = "cite-gate"
 main = "src/index.js"
 compatibility_date = "2026-10-01"
 
+# Public address is the custom domain only; the account's workers.dev address stays off.
+workers_dev = false
+routes = [{ pattern = "mcp.mlpc.co.kr", custom_domain = true }]
+
 # Call log (no script text): Workers Analytics Engine. Rows are kept for three months (platform retention), then dropped.
 [[analytics_engine_datasets]]
 binding = "LOG"
