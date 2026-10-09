@@ -9,7 +9,8 @@ A Cloudflare Worker that serves the same two tools as the local server
   budget). Longer scripts: run the local server.
 * Privacy: the endpoint does not store script text, quotes or sources. Per call it records the minute,
   the tool name, pass/fail counts, the client name your MCP client reports, a bot/self flag and a
-  daily-rotating hash of the IP. Without the `LOG` binding nothing is recorded.
+  daily-rotating hash of the IP. Rows are kept for up to three months (the Workers Analytics Engine
+  retention) and then deleted automatically. Without the `LOG` binding nothing is recorded.
 
 ```
 npm test                      # needs Node 20+ and Python 3.10+ (for the parity test)

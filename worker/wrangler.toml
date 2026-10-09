@@ -4,7 +4,7 @@ name = "cite-gate"
 main = "src/index.js"
 compatibility_date = "2026-10-01"
 
-# Call log (no script text): Workers Analytics Engine. Rows older than the dataset's retention are dropped.
+# Call log (no script text): Workers Analytics Engine. Rows are kept for three months (platform retention), then dropped.
 [[analytics_engine_datasets]]
 binding = "LOG"
 dataset = "cite_gate_calls"

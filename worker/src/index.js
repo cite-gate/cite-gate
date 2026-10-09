@@ -21,7 +21,7 @@ const BOT_UA = /bot|crawler|spider|curl|wget|python-requests|httpclient|uptime|m
 export const PRIVACY =
   "The hosted endpoint does not store your text. For each call it records the time, the tool name, " +
   "the pass/fail counts and the name your client reports, plus a daily-rotating hash of your IP so we " +
-  "can count distinct users per day. Logs are deleted after 30 days. For zero logging, run the local " +
+  "can count distinct users per day. Logs are kept for up to three months, then deleted automatically. For zero logging, run the local " +
   "server instead (python -m cite_gate.mcp_server).";
 
 const TOOLS = [
