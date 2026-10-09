@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.cite-gate/cite-gate",
+  "name": "kr.co.mlpc/cite-gate",
   "title": "cite-gate",
   "description": "Checks that every quote in an AI-written script appears word for word in its source.",
   "repository": {
