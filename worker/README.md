@@ -2,6 +2,7 @@
 
 A Cloudflare Worker that serves the same two tools as the local server
 (`check_citations`, `check_numbers`) over MCP Streamable HTTP at `POST /mcp`.
+Live at `https://mcp.mlpc.co.kr/mcp` (the workers.dev address is turned off).
 
 * `src/check.js` is a JavaScript port of `cite_gate/check.py`. `test/parity.test.mjs` runs both on the
   same inputs and requires identical reports, so the two can't drift apart unnoticed.

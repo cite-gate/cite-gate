@@ -117,6 +117,10 @@ Tools:
 | `check_citations` | `claims` (the format above) and `sources` (`{id: full text}`) | failures, warnings, `passed` |
 | `check_numbers` | `text` and `quotes` | numbers in the text that no quote contains |
 
+There's also a hosted endpoint at `https://mcp.mlpc.co.kr/mcp` (MCP Streamable HTTP, same two
+tools, up to 3,000 characters of prose per call). It doesn't store your text; what it does log is
+listed in [`worker/README.md`](worker/README.md). For zero logging, use the local server above.
+
 Would a hosted version or a review service be useful to you? Tell us in
 [Discussions](https://github.com/cite-gate/cite-gate/discussions).
 
